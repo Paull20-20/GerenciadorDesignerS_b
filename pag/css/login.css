@@ -1,5 +1,9 @@
 /* BASIC */
 
+.user{
+  width: 60px;
+}
+
 .barra {
     background-color: #F8F8FF!important;
     background-image: url(../../img/fundo.jpeg);

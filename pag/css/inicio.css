@@ -35,6 +35,9 @@ html, body{
 .add{
     float: right;
 }
+.cards h3{
+    text-align: center;
+}
 
 
 
@@ -42,7 +45,9 @@ html, body{
 
 
 /* lista de elementos */
-
+.alinhar tr td{
+    justify-content: center;
+}
 
 
 

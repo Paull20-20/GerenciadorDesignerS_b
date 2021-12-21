@@ -19,7 +19,9 @@ class Dados{
 }
 
 
+
 function cadastrarDados(){
+    
                                        //ID
     let data = document.getElementById('data')
     let nome = document.getElementById('nomecard')
