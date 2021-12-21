@@ -25,9 +25,9 @@
     <link rel="stylesheet" href="../../pag/css/inicio.css">
 
     <!-- JavaScript -->
-    <script src="pag/js/app.js"></script>
     <script src="../js/cadastro.js"></script>
-    <script src="../js/funcoesGerais.js"></script>
+    <script src="../js/geral.js"></script>
+
     
 </head>
     <body class="fundo">
@@ -45,17 +45,13 @@
                         <div class="collapse navbar-collapse menu" id="navbarTogglerDemo03">
                             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="loginPainelPrivado.html">Dash <span class="sr-only">(Página atual)</span></a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="inicio.html">Início <span class="sr-only">(Página atual)</span></a>
+                                    <a class="nav-link" href="inicio.html">Início</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="dados.html">Dados</a>
                                 </li>
                                 <li class="nav-item">
-                                    
-                                    <a class="nav-link" href="#" onclick="deslogar()" >Sair</a>
+                                    <a class="nav-link" href="#" onclick="sair()" >Sair</a>
                                 </li>
                             </ul>
                         
@@ -68,96 +64,202 @@
         <!-- FIM DO MENU -->
 
         <section class="container">
+
+            <div id="menssagem">
+                
+            </div>
             
             <div class="row barra">
-                <div class="col-sm-6">
+                <div class="col-sm-5">
                     <input class="form-control" id="myInput" type="text" placeholder="Pesquisar...">
                 </div>
-                <div class="row col-sm-3">
+                <div class="row col-sm-4">
                     
                 </div>
                 <div class="col-sm-3">
                     <div class="add">
                         <!-- Botão para acionar modal -->
-                        <button type="button" class="btn btn-primary rounded-circle" data-toggle="modal" data-target="#modalCadastro">
+                        <button type="button" onclick="dataAtual()" class="btn btn-primary rounded-circle" data-toggle="modal" data-target="#modalCadastro">
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
-                    
 
                 </div>
             </div>
 
             <div class="tabela">
-                <table class="table table-bordered table-striped">
+                <table class="table">
                     <thead>
                     <tr>
                         <th>Data</th>
                         <th> Nome do Card </th>
                         <th>Tipo trabalho</th>
                         <th>Quantidade</th>
+                        <th></th>
+                        <th></th>
+                        
                     </tr>
                     </thead>
-                    <tbody id="myTable">
+                    <tbody id="myTable" class="alinhar">
                     <tr>
                         <td>24/11/2020</td>
                         <td>Mario 3 1989 - PORTAL PLACAS</td>
                         <td>Layout</td>
                         <td>4</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>25/11/2020</td>
                         <td>João marcos 2 5363 - FAMÍLIA UNIDA, FAMÍLIA FELIZ</td>
                         <td>Layout</td>
                         <td>7</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>26/11/2020</td>
                         <td>Maria Victoria 1 0864 - HASHDEX</td>
                         <td>Layout</td>
                         <td>6</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>29/11/2020</td>
                         <td>Mario 3 1989 - PORTAL PLACAS</td>
                         <td>Mod Layout</td>
                         <td>2</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>26/11/2020</td>
                         <td>Maria Victoria 1 0864 - HASHDEX</td>
                         <td>Layout</td>
                         <td>6</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>29/11/2020</td>
                         <td>Mario 3 1989 - PORTAL PLACAS</td>
                         <td>Mod Layout</td>
                         <td>2</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>26/11/2020</td>
                         <td>Maria Victoria 1 0864 - HASHDEX</td>
                         <td>Layout</td>
                         <td>6</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>29/11/2020</td>
                         <td>Mario 3 1989 - PORTAL PLACAS</td>
                         <td>Mod Layout</td>
                         <td>2</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>26/11/2020</td>
                         <td>Maria Victoria 1 0864 - HASHDEX</td>
                         <td>Layout</td>
                         <td>6</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     <tr>
                         <td>29/11/2020</td>
                         <td>Mario 3 1989 - PORTAL PLACAS</td>
                         <td>Mod Layout</td>
                         <td>2</td>
+                        <td> 
+                            <button type="button" class="btn btn-primary" onclick="editar()">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="excluir()">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -221,8 +323,8 @@
           
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-              © 2020 Copyright:
-              <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+              © 2021 Copyright:
+              <a class="text-white" href="https://seubone.com/">seubone.com</a>
             </div>
             <!-- Copyright -->
           </footer>
@@ -246,7 +348,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="Data">Data</label>
-                                <input type="date" class="form-control" id="data" placeholder="Data">
+                                <input type="date" class="form-control" id="data" placeholder="data">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="Nomecard">Nome do Card</label>
@@ -286,6 +388,8 @@
             </div>
             </div>
         </div>
+
+        
  
         <!-- Bootstrap core JavaScript
         ================================================== -->
