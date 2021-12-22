@@ -10,8 +10,9 @@ function logado(nome){
 
 function dataAtual(){
     data = new Date
-    console.log(data.getDate() + " / " + data.getMonth() + " / " + data.getFullYear())
+    console.log(data.getDate() + " / " + data.getMonth() + " / " + data.getFullYear()) //debug
     document.getElementById('data').value = data.getDate() + " / " + data.getMonth() + " / " + data.getFullYear() 
 }
 
+dataAtual()
 
