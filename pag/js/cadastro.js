@@ -47,8 +47,8 @@ function cadastrarDados(){
         dados.qtdCard = '0' //qtdCard
 
     } if (trabalho.value == 'Mod Layout'){
-        var qtd = parseFloat(quantidade.value)
-        dados.qtdTotal = qtd * 0.5
+        var qtd = parseFloat(quantidade.value) * 0.5
+        dados.qtdTotal = qtd.toString()
 
     } if (trabalho.value == 'Layout' || trabalho.value == 'Folha' || trabalho.value == 'Mod Folha') {
         dados.qtdTotal = quantidade.value
@@ -69,7 +69,7 @@ function cadastrarDados(){
         document.getElementById('modal_msg').className = 'text-success'
 
         // limpando os campos do formulario 
-        data.value = ''
+        //data.value = ''
         nome.value = ''
         nome.value = ''
         trabalho.value = ''
