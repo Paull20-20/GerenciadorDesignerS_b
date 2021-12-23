@@ -19,6 +19,7 @@ module.exports = {
     sequelize: sequelize
 }
 
+/*
 
 //criando tabela infoCards
 const Card = sequelize.define("infoCards", {
@@ -37,7 +38,7 @@ const Card = sequelize.define("infoCards", {
 
 })
 
-
+*/
 //
 //Card.sync({force: true}); //criando a tabela acima!
 

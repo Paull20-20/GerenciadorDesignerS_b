@@ -24,7 +24,9 @@ const Sequelize = require("sequelize");
             data: req.body.data,
             nomeCard: req.body.nomeCard,
             tipoTrabalho: req.body.tipoTrabalho,
-            quantidade: req.body.quantidade
+            quantidade: req.body.quantidade,
+            qtdTotal: req.body.qtdTotal,
+            qtdCard: req.body.qtdCard
         }).then(function(){
             res.send("Enviado com sucesso")
         }).catch(function(erro){

@@ -355,32 +355,35 @@
                             </div>
                           
                         </div>
-                        <div class="form-row">
-                          <div class="form-group col-md-6">
-                            <label for="Trabalho">Tipo de Trabalho</label>
-                            <select id="trabalho" class="form-control">
-                              <option value="" selected>Escolher...</option>
-                              <option value="Layout">Layout</option>
-                              <option value="Mod Layout">Mod Layout</option>
-                              <option value="Retificação Layout">Retificação Layout</option>
-                              <option value="Folha">Folha</option>
-                              <option value="Mod Folha">Mod Folha</option>
-                              <option value="Retificação Folha">Retificação Folha</option>
-                            </select>
-                          </div>
-                          <div class="form-group col-md-6">
-                            <label>Quantidade</label>
-                            <input type="text" class="form-control" placeholder="Quantidade" id="quantidade">
-                          </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h5 class="modal_msg" id="modal_msg">       </h5>
-                            </div>
-                            <div class="col-md-3 add">
-                                <button type="submit" class="btn btn-primary" onclick="cadastrarDados()">Cadastrar</button>
-                            </div>
-                        </div>
+                        <form action="" method="post">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="Trabalho">Tipo de Trabalho</label>
+                                  <select id="trabalho" class="form-control">
+                                    <option value="" selected>Escolher...</option>
+                                    <option value="Layout">Layout</option>
+                                    <option value="Mod Layout">Mod Layout</option>
+                                    <option value="Retificação Layout">Retificação Layout</option>
+                                    <option value="Folha">Folha</option>
+                                    <option value="Mod Folha">Mod Folha</option>
+                                    <option value="Retificação Folha">Retificação Folha</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label>Quantidade</label>
+                                  <input type="text" class="form-control" placeholder="Quantidade" id="quantidade">
+                                </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-9">
+                                      <h5 class="modal_msg" id="modal_msg">       </h5>
+                                  </div>
+                                  <div class="col-md-3 add">
+                                      <button type="submit" class="btn btn-primary" onclick="cadastrarDados()">Cadastrar</button>
+                                  </div>
+                              </div>
+                        </form>
+                        
                         
                 </div>
                 

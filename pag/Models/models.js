@@ -1,20 +1,29 @@
-const Sequelize = require("sequelize");
+//const Sequelize = require("sequelize");
+const db = require('./dbConexao');
 
-const Card = sequelize.define("infoCards", {
+const Card = db.sequelize.define("infoCards", {
     data: {
-        type: Sequelize.STRING
+        type: db.Sequelize.STRING
     },
     nomeCard: {
-        type: Sequelize.STRING
+        type: db.Sequelize.STRING
     },
     tipoTrabalho: {
-        type: Sequelize.STRING
+        type: db.Sequelize.STRING
     },
     quantidade: {
-        type: Sequelize.INTEGER
+        type: db.Sequelize.INTEGER
+    },
+    qtdTotal: {
+        type: db.Sequelize.INTEGER
+    },
+    qtdCard: {
+        type: db.Sequelize.INTEGER
     }
 
 })
 
+module.exports = Card;
+
 //
-Card.sync({force: true});
+//Card.sync({force: true});
