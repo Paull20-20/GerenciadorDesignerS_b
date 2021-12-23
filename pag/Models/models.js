@@ -1,4 +1,5 @@
 //const Sequelize = require("sequelize");
+//teste
 const db = require('./dbConexao');
 
 const Card = db.sequelize.define("infoCards", {
